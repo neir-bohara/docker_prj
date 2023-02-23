@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  nginx:
+    image: neir/task_one:latest
+    container_name: task_one
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes: 
+       - /Users/niranjan/others/docker-proj/data:/usr/share/nginx/html
+       - /Users/niranjan/others/docker-proj/log:/var/log/nginx
+  # shiny:
+  #   image: mdancho/shinyauth:latest
+  #   container_name: shiny
+  #   restart: unless-stopped
+  #   expose:
+  #     - 3838
+  #   volumes:
+  #     - /home/ubuntu/business_science_apps/:/srv/shiny-server/
+  #     - /home/ubuntu/log/shiny-server/:/var/log/shiny-server/

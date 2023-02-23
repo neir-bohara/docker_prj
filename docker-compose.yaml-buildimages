@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+    task1_web:
+        build: .
+        container_name: task_one
+        ports:
+            - "8080:80"
+        restart: always
+        volumes: 
+          - /Users/niranjan/others/docker-proj/data:/usr/share/nginx/html
+          - /Users/niranjan/others/docker-proj/log:/var/log/nginx
